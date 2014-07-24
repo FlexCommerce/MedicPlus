@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header clearfix">
+    <div class="logo-wrap clearfix">
+         <div class="wrapper clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}      
+        </div>
+    </div>
+    <div class="clearfix menu-sz">
+        <nav class="wrapper sz-nav">
+          {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+        </nav>
+    </div>    
+</header>
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
+<section>
+  <div class="copy-sz">
+    <div class="wrapper clearfix f-socialicons">
+        {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile', 'align':'widget-align-center'})|raw}}
+    </div>
+  </div>
+</section>
+{% endblock %}

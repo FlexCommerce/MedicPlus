@@ -1,0 +1,53 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header clearfix">
+    <div class="logo-wrap clearfix">
+         <div class="wrapper clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}      
+        </div>
+    </div>
+    <div class="clearfix menu-sz">
+        <nav class="wrapper sz-nav">
+          {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+        </nav>
+    </div>    
+</header>
+<section>
+  {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+<div class="main wrapper clearfix">
+    <section class="homemaintext-sz">
+        {{widget('content', 'maintextheader', {"content":"<h1>Lorem ipsum dolor?</h1>"})|raw}}
+        {{widget('content', 'maintextcontent', {"content":"<h3>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum.</h3>"})|raw}}
+    </section>
+    <section>
+        <div class="wrapper clearfix">
+            {{widget('content', 'maintextheader2', {"content":"<h3>Dapibus, mauris nec malesuada</h3>"})|raw}}
+            <div class="widget responsivecolumns columns-two-50-50">
+                <div class="column columns-two-left">                    
+                    {{widget('content', 'left-content', {"content":"<p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus</p>"})|raw}}
+                    {{widget('button', 'left-button2', {text:'show more', 'align':'widget-align-right'})|raw}}
+                </div>
+                <div class="column columns-two-right">
+                    {{widget('content', 'right-content', {"content":"<p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus</p>"})|raw}}
+                    {{widget('button', 'right-button2', {text:'show more', 'align':'widget-align-right'})|raw}}
+                </div>
+            </div>
+        </div>        
+    </section>
+    <section class="listintext-sz">
+        {{widget('content', 'listintextheader', {"content":"<h2>Who we are?</h2>"})|raw}}
+        {{widget('content', 'listintextcontent', {"content":"<p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend</p>"})|raw}}
+    </section> 
+    {{zone('main')|raw}}
+</div>
+<section>
+  <div class="copy-sz">
+    <div class="wrapper clearfix f-socialicons">
+        {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile', 'align':'widget-align-center'})|raw}}
+    </div>
+  </div>
+</section>
+{% endblock %}
